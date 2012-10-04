@@ -1,4 +1,11 @@
 <?php
+/**
+* ES3Bucket class file.
+*
+* @author Frédéric Gascon <frederic.gascon@gmail.com>
+* @link https://github.com/fgascon/yii-aws
+* @package yii-aws
+*/
 
 class ES3Bucket extends CComponent
 {

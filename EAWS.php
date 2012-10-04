@@ -1,4 +1,11 @@
 <?php
+/**
+* EAWS class file.
+*
+* @author Frédéric Gascon <frederic.gascon@gmail.com>
+* @link https://github.com/fgascon/yii-aws
+* @package yii-aws
+*/
 
 class EAWS extends CApplicationComponent
 {

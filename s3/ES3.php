@@ -1,4 +1,11 @@
 <?php
+/**
+* ES3 class file.
+*
+* @author Frédéric Gascon <frederic.gascon@gmail.com>
+* @link https://github.com/fgascon/yii-aws
+* @package yii-aws
+*/
 
 require_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'ES3Bucket.php');
 
