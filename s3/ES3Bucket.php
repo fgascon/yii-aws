@@ -24,6 +24,11 @@ class ES3Bucket extends CComponent
 		return $this->_sdk->create_object($this->_name,$filename,$options);
 	}
 	
+	public function getObject($filename,$options=null)
+	{
+		return $this->_sdk->get_object($this->_name,$filename,$options);
+	}
+	
 	public function getObjectUrl($filename,$preauth=0,$options=null)
 	{
 		return $this->_sdk->get_object_url($this->_name,$filename,$preauth,$options);
