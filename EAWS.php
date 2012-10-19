@@ -16,6 +16,9 @@ class EAWS extends CApplicationComponent
 	public $cacheConfig = '';
 	public $certificateAuthority = false;
 	
+	public $s3Options = array();
+	public $sesOptions = array();
+	
 	public function init()
 	{
 		require_once($this->getSdkPath().DIRECTORY_SEPARATOR.'sdk.class.php');
@@ -41,8 +44,19 @@ class EAWS extends CApplicationComponent
 		if($this->_s3===null)
 		{
 			require_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'s3'.DIRECTORY_SEPARATOR.'ES3.php');
-			$this->_s3 = new ES3();
+			$this->_s3 = new ES3($this->s3Options);
 		}
 		return $this->_s3;
+	}
+	
+	private $_ses;
+	public function getSes()
+	{
+		if($this->_ses===null)
+		{
+			require_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'ses'.DIRECTORY_SEPARATOR.'ESES.php');
+			$this->_ses = new ESES($this->sesOptions);
+		}
+		return $this->_ses;
 	}
 }
