@@ -146,4 +146,9 @@ class ES3Bucket extends CComponent
 	{
 		return $this->_sdk->if_object_exists($this->_name,$filename);
 	}
+	
+	public function generateUploadParameters($expires='+1 hour',$options=null)
+	{
+		return $this->_sdk->generate_upload_parameters($this->_name,$expires,$options);
+	}
 }

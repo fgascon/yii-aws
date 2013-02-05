@@ -23,6 +23,7 @@ class EAWS extends CApplicationComponent
 	{
 		require_once($this->getSdkPath().DIRECTORY_SEPARATOR.'sdk.class.php');
 		Yii::registerAutoloader(array('CFLoader','autoloader'));
+		require_once($this->getSdkPath().DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'s3browserupload.class.php');
 		CFCredentials::set(array(
 			'@default'=>array(
 				'key'=>$this->accessKey,

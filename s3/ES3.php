@@ -17,7 +17,7 @@ class ES3 extends CComponent
 	
 	public function __construct()
 	{
-		$this->_sdk = new AmazonS3();
+		$this->_sdk = new S3BrowserUpload();
 	}
 	
 	public function getBucket($bucketName)
